@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="A very simple notepad that you can use.">
+  	<meta name="author" content="westtle">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simple Note</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+</head>
+<body>
+	<main>
+		<div id="simple-note">
+			<h2>Simple Note</h2>
+			<div class="note-title">
+				<input type="text" placeholder="Title">
+			</div>
+			<div class="note-text">
+				<textarea placeholder="Your text here."></textarea>
+			</div>
+			<div class="note-function">
+				<button class="select-all-text">Select all</button>
+				<button class="delete-all-text">Delete all</button>
+
+				<!-- Appear when clicked. -->
+				<span class="delete-choices hidden">
+				<span>Are you sure?</span>
+				<button class="yes-delete">Yes</button><button class="no-delete">No</button>
+				</span>
+				<!-- ------------------- -->
+
+				<button class="save-to-local">Save to local</button>
+			</div>
+		</div>
+	</main>
+
+	<script type="text/javascript" src="assets/scripts/script.js"></script>
+</body>
+</html>
