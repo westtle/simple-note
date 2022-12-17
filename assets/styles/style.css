@@ -93,15 +93,19 @@ main {
 	border-right: var(--border-shorthand);
 }
 
-.__function button:hover,
-.__function button:focus {
+.__function button:hover {
 	color: var(--button-hover-color);
 	background: var(--button-hover-backround);
 }
 
-._delete-all {
+._delete-all,
+._delete-confirm {
 	color: #fff;
 	background: #fd6060;
+}
+
+._delete-confirm {
+	display: none;
 }
 
 ._save-to-local {

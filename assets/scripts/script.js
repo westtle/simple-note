@@ -4,31 +4,33 @@ const noteBody = document.querySelector(".__body textarea");
 
 const selectAllButton = document.querySelector("._select-all");
 const deleteAllButton = document.querySelector("._delete-all");
+const confirmDeleteButton = document.querySelector("._delete-confirm");
 const saveToLocalButton = document.querySelector("._save-to-local");
 
 function selectAll() {
 	noteBody.select();
 };
 
-function deleteAll() {
-	deleteChoices.classList.toggle("hidden");
+function showDeleteConfirm() {
+	confirmDeleteButton.style.display = "inline";
+	deleteAllButton.style.display = "none";
 
-	let yesDelete = document.querySelector(".yes-delete");
-	let noDelete = document.querySelector(".no-delete");
+	// setTimeout is leaving a little bug, but I will fix it later (maybe).
+	setTimeout(() => {
+		confirmDeleteButton.style.display = "none";
+		deleteAllButton.style.display = "inline";
+	}, 2500);
+};
 
-	yesDelete.addEventListener("click", () => {
-		deleteChoices.classList.add("hidden");
+function confirmDelete() {
+	confirmDeleteButton.style.display = "none";
+	deleteAllButton.style.display = "inline";
 
-		noteTitle.value = "";
-		noteBody.value = "";
+	noteTitle.value = "";
+	noteBody.value = "";
 
-		storage.saveData.saveTitle();
-		storage.saveData.saveText();
-	});
-
-	noDelete.addEventListener("click", () => {
-		deleteChoices.classList.add("hidden");
-	});
+	saveText();
+	saveTitle();
 };
 
 function downloadNote() {
@@ -72,7 +74,8 @@ noteTitle.addEventListener("input", saveTitle);
 noteBody.addEventListener("input", saveText);
 
 selectAllButton.addEventListener("click", selectAll);
-deleteAllButton.addEventListener("click", deleteAll);
+deleteAllButton.addEventListener("click", showDeleteConfirm);
+confirmDeleteButton.addEventListener("click", confirmDelete);
 saveToLocalButton.addEventListener("click", downloadNote);
 
 document.addEventListener("DOMContentLoaded", () => {
