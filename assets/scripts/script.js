@@ -1,12 +1,12 @@
 // HTML
 const noteTitle = document.querySelector(".__title input")
-const noteText = document.querySelector(".__body textarea")
+const noteBody = document.querySelector(".__body textarea")
 const selectAllButton = document.querySelector("._select-all")
 const deleteAllButton = document.querySelector("._delete-all")
 const saveToLocalButton = document.querySelector("._save-to-local")
 
 function selectAll() {
-	noteText.select();
+	noteBody.select();
 };
 
 function deleteAll() {
@@ -19,7 +19,7 @@ function deleteAll() {
 		deleteChoices.classList.add("hidden");
 
 		noteTitle.value = "";
-		noteText.value = "";
+		noteBody.value = "";
 
 		storage.saveData.saveTitle();
 		storage.saveData.saveText();
@@ -56,7 +56,7 @@ function saveTitle() {
 };
 
 function saveText() {
-	localStorage.setItem(storageNoteText, noteText.value);
+	localStorage.setItem(storageNoteText, noteBody.value);
 };
 
 function loadData() {
@@ -64,11 +64,11 @@ function loadData() {
 	noteTitle.value = titleFromStorage;
 
 	let textFromStorage = localStorage.getItem(storageNoteText) || "";
-	noteText.value = textFromStorage;
+	noteBody.value = textFromStorage;
 };
 
 noteTitle.addEventListener("input", saveTitle);
-noteText.addEventListener("input", saveText);
+noteBody.addEventListener("input", saveText);
 
 selectAllButton.addEventListener("click", selectAll);
 deleteAllButton.addEventListener("click", deleteAll);
