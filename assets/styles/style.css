@@ -113,26 +113,14 @@ main {
 	margin-left: auto;
 }
 
-/*.note-function .yes-delete,
-.note-function .no-delete {
-	margin-right: 3px;
-	margin-left: 3px;
-	font-size: 10px;
-}
-
-.note-function .save-to-local {
-	margin: 0;
-	float: right;
-}
-
-/* Extra */
-/*
-.hidden {
-	display: none;
-}
-
-@media (max-height: 350px) {
-	body {
-		height: 350px;
+@media (max-width: 460px) {
+	html {
+		font-size: calc(1rem - 8%);
 	}
-}*/
+}
+
+@media (max-width: 320px) {
+	html {
+		font-size: calc(1rem - 12%);
+	}
+}
