@@ -1,12 +1,9 @@
-const html = {
-	noteTitle: document.querySelector(".note-title input"),
-	noteText: document.querySelector(".note-text textarea"),
-	noteSelectAll: document.querySelector(".select-all-text"),
-	noteDeleteAll: document.querySelector(".delete-all-text"),
-	noteSaveLocal: document.querySelector(".save-to-local"),
-};
-
-let deleteChoices = document.querySelector(".delete-choices");
+// HTML
+const noteTitle = document.querySelector(".__title input")
+const noteText = document.querySelector(".__body textarea")
+const selectAllButton = document.querySelector("._select-all")
+const deleteAllButton = document.querySelector("._delete-all")
+const saveToLocalButton = document.querySelector("._save-to-local")
 
 // Local Storage.
 
@@ -16,25 +13,25 @@ const storageNoteText = "Note_Text";
 let storage = {
 	saveData: {
 		saveTitle: function saveTitle() {
-			let titleValue = html.noteTitle.value;
+			let titleValue = noteTitle.value;
 			localStorage.setItem(storageNoteTitle, titleValue);
 		},
 		saveText: function saveText() {
-			let textValue = html.noteText.value;
+			let textValue = noteText.value;
 			localStorage.setItem(storageNoteText, textValue);
 		}
 	},
 	loadData: function loadData() {
 		let titleFromStorage = localStorage.getItem(storageNoteTitle);
-		html.noteTitle.value = titleFromStorage;
+		noteTitle.value = titleFromStorage;
 
 		let textFromStorage = localStorage.getItem(storageNoteText);
-		html.noteText.value = textFromStorage;
+		noteText.value = textFromStorage;
 	}
 };
 
-html.noteTitle.addEventListener("input", storage.saveData.saveTitle);
-html.noteText.addEventListener("input", storage.saveData.saveText);
+noteTitle.addEventListener("input", storage.saveData.saveTitle);
+noteText.addEventListener("input", storage.saveData.saveText);
 
 document.addEventListener("DOMContentLoaded", () => {
 	storage.loadData();
@@ -44,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let extraFunction = {
 	selectAll: function selectAll() {
-		html.noteText.select();
+		noteText.select();
 	},
 	deleteAll: function deleteAll() {
 		deleteChoices.classList.toggle("hidden");
@@ -55,8 +52,8 @@ let extraFunction = {
 		yesDelete.addEventListener("click", () => {
 			deleteChoices.classList.add("hidden");
 
-			html.noteTitle.value = "";
-			html.noteText.value = "";
+			noteTitle.value = "";
+			noteText.value = "";
 
 			storage.saveData.saveTitle();
 			storage.saveData.saveText();
@@ -83,6 +80,6 @@ let extraFunction = {
 	}
 };
 
-html.noteSelectAll.addEventListener("click", extraFunction.selectAll);
-html.noteDeleteAll.addEventListener("click", extraFunction.deleteAll);
-html.noteSaveLocal.addEventListener("click", extraFunction.saveToLocal);
+selectAllButton.addEventListener("click", extraFunction.selectAll);
+deleteAllButton.addEventListener("click", extraFunction.deleteAll);
+saveToLocalButton.addEventListener("click", extraFunction.saveToLocal);
