@@ -1,9 +1,10 @@
 // HTML
-const noteTitle = document.querySelector(".__title input")
-const noteBody = document.querySelector(".__body textarea")
-const selectAllButton = document.querySelector("._select-all")
-const deleteAllButton = document.querySelector("._delete-all")
-const saveToLocalButton = document.querySelector("._save-to-local")
+const noteTitle = document.querySelector(".__title input");
+const noteBody = document.querySelector(".__body textarea");
+
+const selectAllButton = document.querySelector("._select-all");
+const deleteAllButton = document.querySelector("._delete-all");
+const saveToLocalButton = document.querySelector("._save-to-local");
 
 function selectAll() {
 	noteBody.select();
