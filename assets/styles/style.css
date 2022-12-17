@@ -32,12 +32,16 @@ main {
 	padding: var(--unit-two);
 }
 
+h2 {
+	margin-top: 0;
+}
+
 #simple-note {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	height: 100%;
-	max-width: 33.75rem;
+	max-width: 32rem;
 	margin: 4.5vh auto;
 }
 
