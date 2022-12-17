@@ -52,20 +52,18 @@ const storageNoteTitle = "Note_Title";
 const storageNoteText = "Note_Text";
 
 function saveTitle() {
-	let titleValue = noteTitle.value;
-	localStorage.setItem(storageNoteTitle, titleValue);
+	localStorage.setItem(storageNoteTitle, noteTitle.value);
 };
 
 function saveText() {
-	let textValue = noteText.value;
-	localStorage.setItem(storageNoteText, textValue);
+	localStorage.setItem(storageNoteText, noteText.value);
 };
 
 function loadData() {
-	let titleFromStorage = localStorage.getItem(storageNoteTitle);
+	let titleFromStorage = localStorage.getItem(storageNoteTitle) || "";
 	noteTitle.value = titleFromStorage;
 
-	let textFromStorage = localStorage.getItem(storageNoteText);
+	let textFromStorage = localStorage.getItem(storageNoteText) || "";
 	noteText.value = textFromStorage;
 };
 
