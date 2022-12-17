@@ -85,7 +85,7 @@ h2 {
 	width: 100%;
 }
 
-.__function button {
+button {
 	border: none;
 	min-width: 20%;
 	padding: var(--unit-one) var(--unit-two);
@@ -100,7 +100,7 @@ h2 {
 ._delete-all,
 ._delete-confirm {
 	color: #fff;
-	background: #fd6060;
+	background: #FD5E5E;
 }
 
 ._delete-confirm {
@@ -117,17 +117,5 @@ h2 {
 	.__function button:hover {
 		color: var(--button-hover-color);
 		background: var(--button-hover-backround);
-	}
-}
-
-@media (max-width: 28.75rem) {
-	html {
-		font-size: calc(1rem - 8%);
-	}
-}
-
-@media (max-width: 20rem) {
-	html {
-		font-size: calc(1rem - 12%);
 	}
 }
