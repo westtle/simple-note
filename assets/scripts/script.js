@@ -34,8 +34,8 @@ function confirmDelete() {
 };
 
 function downloadNote() {
-	let title = localStorage.getItem(storageNoteTitle);
-	let text = localStorage.getItem(storageNoteText);
+	let title = noteTitle.value || "Simple Note";
+	let text = noteBody.value;
 
 	let element = document.createElement('a');
 	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
