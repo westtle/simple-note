@@ -97,11 +97,6 @@ h2 {
 	border-right: var(--border-shorthand);
 }
 
-.__function button:hover {
-	color: var(--button-hover-color);
-	background: var(--button-hover-backround);
-}
-
 ._delete-all,
 ._delete-confirm {
 	color: #fff;
@@ -115,6 +110,14 @@ h2 {
 ._save-to-local {
 	border-left: var(--border-shorthand) !important;
 	margin-left: auto;
+}
+
+/* Media Query */
+@media (hover: hover) {
+	.__function button:hover {
+		color: var(--button-hover-color);
+		background: var(--button-hover-backround);
+	}
 }
 
 @media (max-width: 460px) {
