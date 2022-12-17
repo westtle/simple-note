@@ -30,7 +30,7 @@ function deleteAll() {
 	});
 };
 
-function saveToLocal() {
+function downloadNote() {
 	let title = localStorage.getItem(storageNoteTitle);
 	let text = localStorage.getItem(storageNoteText);
 
@@ -54,11 +54,12 @@ const storageNoteText = "Note_Text";
 function saveTitle() {
 	let titleValue = noteTitle.value;
 	localStorage.setItem(storageNoteTitle, titleValue);
-}
+};
+
 function saveText() {
 	let textValue = noteText.value;
 	localStorage.setItem(storageNoteText, textValue);
-}
+};
 
 function loadData() {
 	let titleFromStorage = localStorage.getItem(storageNoteTitle);
@@ -66,14 +67,14 @@ function loadData() {
 
 	let textFromStorage = localStorage.getItem(storageNoteText);
 	noteText.value = textFromStorage;
-}
+};
 
 noteTitle.addEventListener("input", saveTitle);
 noteText.addEventListener("input", saveText);
 
 selectAllButton.addEventListener("click", selectAll);
 deleteAllButton.addEventListener("click", deleteAll);
-saveToLocalButton.addEventListener("click", saveToLocal);
+saveToLocalButton.addEventListener("click", downloadNote);
 
 document.addEventListener("DOMContentLoaded", () => {
 	loadData();
