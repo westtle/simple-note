@@ -1,35 +1,37 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="A very simple notepad that you can use.">
   	<meta name="author" content="westtle">
+	<meta name="description" content="A very simple notepad that you can use.">
+	<meta name="keywords" content="notepad, note, notepad online, simple note, simple notepad">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Simple Note</title>
 
+	<link rel="icon" type="image/x-icon" href="#">
 	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 </head>
 <body>
 	<main>
 		<div id="simple-note">
-			<div class="note-title">
+			<div class="__title">
 				<input type="text" placeholder="Title">
 			</div>
-			<div class="note-text">
+			<div class="__body">
 				<textarea placeholder="Your text here."></textarea>
 			</div>
-			<div class="note-function">
-				<button class="select-all-text">Select all</button>
-				<button class="delete-all-text">Delete all</button>
+			<div class="__function">
+				<button class="_select-all">Select all</button>
+				<button class="_delete-all">Delete all</button>
 
 				<!-- Appear when clicked. -->
-				<span class="delete-choices hidden">
-				<span>Are you sure?</span>
-				<button class="yes-delete">Yes</button><button class="no-delete">No</button>
+				<span class="_delete-choices hidden">
+					<span>Are you sure?</span>
+					<button class="yes-delete">Yes</button><button class="no-delete">No</button>
 				</span>
 				<!-- ------------------- -->
 
-				<button class="save-to-local">Save to local</button>
+				<button class="_save-to-local">Save to local</button>
 			</div>
 		</div>
 	</main>
