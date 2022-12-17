@@ -86,6 +86,7 @@ h2 {
 }
 
 button {
+	background: none;
 	border: none;
 	min-width: 20%;
 	padding: var(--unit-one) var(--unit-two);
