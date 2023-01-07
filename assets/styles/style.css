@@ -15,7 +15,7 @@
 	--unit-two: 0.75rem; /* 12px */
 }
 
-* {
+*, *::before, *::after  {
 	color: var(--color-main);
 	box-sizing: border-box;
 }
