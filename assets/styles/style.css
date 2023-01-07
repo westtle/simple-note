@@ -20,16 +20,18 @@
 	box-sizing: border-box;
 }
 
-body {
+body { /* Left & right spacing is left & right from default body margin + 12px */
 	height: 100vh;
 	margin-top: 0;
 	margin-bottom: 0;
+	padding: var(--unit-two);
 	font-size: var(--font-size-main);
 }
 
 main {
 	height: calc(100% - 9vh);
-	padding: var(--unit-two);
+	margin: 4.5vh auto;
+	max-width: 32rem;
 }
 
 h2 {
@@ -41,8 +43,6 @@ h2 {
 	flex-direction: column;
 	align-items: center;
 	height: 100%;
-	max-width: 32rem;
-	margin: 4.5vh auto;
 }
 
 .__title {
