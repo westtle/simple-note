@@ -1,4 +1,4 @@
-// HTML
+// HTML.
 const noteTitle = document.querySelector(".__title input");
 const noteBody = document.querySelector(".__body textarea");
 
