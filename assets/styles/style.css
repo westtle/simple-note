@@ -119,6 +119,16 @@ button {
 	margin-left: auto;
 }
 
+/* Notice / Link */
+
+.__notice {
+	margin-top: 0.625rem;
+	padding: 0 var(--unit-one);
+	font-size: var(--font-size-second);
+	line-height: 1.1;
+	word-wrap: break-word;
+}
+
 /* Media Query */
 
 @media (hover: hover) {
