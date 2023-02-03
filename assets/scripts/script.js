@@ -29,8 +29,8 @@ function confirmDelete() {
 	noteTitle.value = "";
 	noteBody.value = "";
 
-	saveText();
 	saveTitle();
+	saveText();
 };
 
 function downloadNote() {
@@ -51,22 +51,22 @@ function downloadNote() {
 
 
 // Local Storage.
-const storageNoteTitle = "Note_Title";
-const storageNoteText = "Note_Text";
+const note_title = "Note_Title";
+const note_text = "Note_Text";
 
 function saveTitle() {
-	localStorage.setItem(storageNoteTitle, noteTitle.value);
+	localStorage.setItem(note_title, noteTitle.value);
 };
 
 function saveText() {
-	localStorage.setItem(storageNoteText, noteBody.value);
+	localStorage.setItem(note_text, noteBody.value);
 };
 
 function loadData() {
-	let titleFromStorage = localStorage.getItem(storageNoteTitle) || "";
+	let titleFromStorage = localStorage.getItem(note_title) || "";
 	noteTitle.value = titleFromStorage;
 
-	let textFromStorage = localStorage.getItem(storageNoteText) || "";
+	let textFromStorage = localStorage.getItem(note_text) || "";
 	noteBody.value = textFromStorage;
 };
 
