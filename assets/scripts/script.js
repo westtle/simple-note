@@ -1,3 +1,5 @@
+let timerId;
+
 // HTML.
 const noteTitle = document.querySelector(".__title input");
 const noteBody = document.querySelector(".__body textarea");
@@ -15,8 +17,7 @@ function showDeleteConfirm() {
 	confirmDeleteButton.style.display = "inline";
 	deleteAllButton.style.display = "none";
 
-	// setTimeout is leaving a little bug, but I will fix it later (maybe).
-	setTimeout(() => {
+	timerId = setTimeout(() => {
 		confirmDeleteButton.style.display = "none";
 		deleteAllButton.style.display = "inline";
 	}, 2500);
@@ -28,6 +29,8 @@ function confirmDelete() {
 
 	noteTitle.value = "";
 	noteBody.value = "";
+
+	clearInterval(timerId);
 
 	saveTitle();
 	saveText();
