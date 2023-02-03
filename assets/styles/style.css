@@ -48,13 +48,13 @@ h2 {
 /* Title Input */
 
 .__title {
+	border: var(--border-shorthand);
+	border-bottom: 0;
 	width: 100%;
 }
 
 .__title input {
-	border: var(--border-shorthand);
-	border-bottom: 0;
-	border-radius: 0.188rem 0.188rem 0 0;
+	border: none;
 	width: 100%;
 	padding: var(--unit-one) var(--unit-two);
 	font-size: var(--font-size-button);
