@@ -21,18 +21,21 @@
 }
 
 body { /* Left & right spacing is left & right from default body margin + 12px */
-	height: 100vh;
-	margin-top: 0;
-	margin-bottom: 0;
+	display: flex;
+	justify-content: center;
+	min-height: 91vh;
+	margin-top: 4.5vh;
+	margin-bottom: 4.5vh;
 	padding: var(--unit-two);
 	font-size: var(--font-size-main);
+	text-align: center;
 }
 
 main {
-	height: calc(100% - 9vh);
-	margin: 4.5vh auto;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 	max-width: 32rem;
-	text-align: center;
 }
 
 h2 {
