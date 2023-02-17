@@ -32,6 +32,7 @@ main {
 	height: calc(100% - 9vh);
 	margin: 4.5vh auto;
 	max-width: 32rem;
+	text-align: center;
 }
 
 h2 {
@@ -121,7 +122,7 @@ button {
 
 /* Notice / Link */
 
-.__notice {
+#notice {
 	margin-top: 0.625rem;
 	padding: 0 var(--unit-one);
 	font-size: var(--font-size-second);
