@@ -126,7 +126,7 @@ button {
 /* Notice / Link */
 
 #notice {
-	margin-top: 0.625rem;
+	margin-top: 0.656rem;
 	padding: 0 var(--unit-one);
 	font-size: var(--font-size-second);
 	line-height: 1.1;
