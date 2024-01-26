@@ -10,46 +10,46 @@ const confirmDeleteButton = document.querySelector("._delete-confirm");
 const saveToLocalButton = document.querySelector("._save-to-local");
 
 function selectAll() {
-	noteBody.select();
+    noteBody.select();
 };
 
 function showDeleteConfirm() {
-	confirmDeleteButton.style.display = "inline";
-	deleteAllButton.style.display = "none";
+    confirmDeleteButton.style.display = "inline";
+    deleteAllButton.style.display = "none";
 
-	timerId = setTimeout(() => {
-		confirmDeleteButton.style.display = "none";
-		deleteAllButton.style.display = "inline";
-	}, 2500);
+    timerId = setTimeout(() => {
+        confirmDeleteButton.style.display = "none";
+        deleteAllButton.style.display = "inline";
+    }, 2500);
 };
 
 function confirmDelete() {
-	confirmDeleteButton.style.display = "none";
-	deleteAllButton.style.display = "inline";
+    confirmDeleteButton.style.display = "none";
+    deleteAllButton.style.display = "inline";
 
-	noteTitle.value = "";
-	noteBody.value = "";
+    noteTitle.value = "";
+    noteBody.value = "";
 
-	clearInterval(timerId);
+    clearInterval(timerId);
 
-	saveTitle();
-	saveText();
+    saveTitle();
+    saveText();
 };
 
 function downloadNote() {
-	let title = noteTitle.value || "Simple Note";
-	let text = noteBody.value;
+    let title = noteTitle.value || "Simple Note";
+    let text = noteBody.value;
 
-	let element = document.createElement('a');
-	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-	element.setAttribute('download', title);
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', title);
 
-	element.style.display = 'none';
-	document.body.appendChild(element);
+    element.style.display = 'none';
+    document.body.appendChild(element);
 
-	element.click(); // Not my code, I just changed it a bit haha.
+    element.click(); // Not my code, I just changed it a bit haha.
 
-	document.body.removeChild(element);
+    document.body.removeChild(element);
 };
 
 
@@ -58,19 +58,19 @@ const note_title = "Note_Title";
 const note_text = "Note_Text";
 
 function saveTitle() {
-	localStorage.setItem(note_title, noteTitle.value);
+    localStorage.setItem(note_title, noteTitle.value);
 };
 
 function saveText() {
-	localStorage.setItem(note_text, noteBody.value);
+    localStorage.setItem(note_text, noteBody.value);
 };
 
 function loadData() {
-	let titleFromStorage = localStorage.getItem(note_title) || "";
-	noteTitle.value = titleFromStorage;
+    let titleFromStorage = localStorage.getItem(note_title) || "";
+    noteTitle.value = titleFromStorage;
 
-	let textFromStorage = localStorage.getItem(note_text) || "";
-	noteBody.value = textFromStorage;
+    let textFromStorage = localStorage.getItem(note_text) || "";
+    noteBody.value = textFromStorage;
 };
 
 noteTitle.addEventListener("input", saveTitle);
@@ -82,5 +82,5 @@ confirmDeleteButton.addEventListener("click", confirmDelete);
 saveToLocalButton.addEventListener("click", downloadNote);
 
 document.addEventListener("DOMContentLoaded", () => {
-	loadData();
+    loadData();
 });
