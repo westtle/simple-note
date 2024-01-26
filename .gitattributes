@@ -1,0 +1,12 @@
+*               text=auto
+
+# Source code
+*.css           text diff=css
+*.html          text diff=html
+*.js            text
+
+# Documentation
+*.md            text diff=markdown
+
+# Configs
+.gitattributes  text
