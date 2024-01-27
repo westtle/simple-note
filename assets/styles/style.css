@@ -16,5 +16,6 @@ svg {
 button,
 input,
 textarea {
+    display: block;
     font: inherit;
 }
