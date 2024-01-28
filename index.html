@@ -16,14 +16,10 @@
         <h1 class="sr-only">Simple Note</h1>
         <section class="simple-note">
             <div class="simple-note__inputs">
-                <label class="simple-note__label simple-note__label--title">
-                    <span class="sr-only">Note title:</span>
-                    <input class="simple-note__input simple-note__input--title" type="text" placeholder="Your title" spellcheck="false">
-                </label>
-                <label class="simple-note__label simple-note__label--body">
-                    <span class="sr-only">Note content:</span>
-                    <textarea class="simple-note__input simple-note__input--body" spellcheck="false">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque amet veniam nulla quia harum explicabo.</textarea>
-                </label>
+                <label class="simple-note__label simple-note__label--title sr-only" for="simple-note__input--title">Note title:</label>
+                <input id="simple-note__input--title" class="simple-note__input simple-note__input--title" type="text" placeholder="Your title" spellcheck="false">
+                <label class="simple-note__label simple-note__label--body sr-only" for="simple-note__input--body">Note content:</label>
+                <textarea id="simple-note__input--body" class="simple-note__input simple-note__input--body" spellcheck="false">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque amet veniam nulla quia harum explicabo.</textarea>
             </div>
             <div class="simple-note__buttons">
                 <button class="simple-note__button simple-note__button--download">
