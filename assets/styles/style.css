@@ -17,5 +17,6 @@ button,
 input,
 textarea {
     display: block;
+    background-color: transparent;
     font: inherit;
 }
