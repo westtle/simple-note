@@ -18,5 +18,6 @@ input,
 textarea {
     display: block;
     background-color: transparent;
+    border: none;
     font: inherit;
 }
