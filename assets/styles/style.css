@@ -61,6 +61,7 @@ button,
 input,
 textarea {
     display: block;
+    color: inherit;
     background-color: transparent;
     border: none;
     font: inherit;
