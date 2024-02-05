@@ -83,6 +83,10 @@ textarea {
     clip-path: inset(50%);
 }
 
+html {
+    min-height: 100%;
+}
+
 body {
     color: hsl(var(--color-1));
     background-color: hsl(var(--color-2));
