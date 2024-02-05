@@ -5,6 +5,17 @@
 *.html          text diff=html
 *.js            text
 
+# Graphics
+*.png           binary
+*.ico           binary
+*.svg           text
+
+# Fonts
+*.ttf           binary
+*.eot           binary
+*.woff          binary
+*.woff2         binary
+
 # Documentation
 *.md            text diff=markdown
 
