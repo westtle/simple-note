@@ -106,7 +106,7 @@ body {
     width: 90%;
     max-width: 27.625rem;
     margin: 0 auto;
-    padding-top: 2rem;
+    padding: 2rem 0;
 }
 
 .simple-note__input--title {
