@@ -24,6 +24,24 @@
          url("../fonts/roboto-slab/roboto-slab-500.svg#RobotoSlab") format("svg");
 }
 
+:root {
+    /* Fonts */
+    --font-roboto: Roboto, sans-serif;
+    --font-roboto-slab: "Roboto Slab", serif;
+    
+    --font-1: var(--font-roboto);
+    --font-2: var(--font-roboto-slab);
+
+    /* Colors */
+    --black: 0, 0%, 0%;
+    --white: 0, 0%, 100%;
+    --boulder: 0, 0%, 46%;
+
+    --color-1: var(--black), 80%;
+    --color-2: var(--white);
+    --color-3: var(--boulder), 80%; /* Placeholder and Icons */
+}
+
 *,
 *::before,
 *::after {
