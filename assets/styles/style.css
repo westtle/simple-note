@@ -40,6 +40,9 @@
     --color-1: var(--black), 80%;
     --color-2: var(--white);
     --color-3: var(--boulder), 80%; /* Placeholder and Icons */
+
+    /* Other */
+    --focus-1: 0.125rem solid hsl(var(--color-1));
 }
 
 *,
@@ -110,6 +113,8 @@ body {
 }
 
 .simple-note__input { padding: 0.5625rem 0.75rem; }
+
+.simple-note__input:focus-visible { outline: var(--focus-1); }
 
 .simple-note__input--title {
     font-family: var(--font-2);
