@@ -113,6 +113,7 @@ body {
 }
 
 .simple-note__input--body {
+    flex-grow: 1;
     font-family: var(--font-1);
     font-size: 1rem;
     font-weight: 400;
