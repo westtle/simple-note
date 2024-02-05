@@ -89,6 +89,7 @@ body {
 }
 
 .simple-note__input--title {
+    margin-bottom: 1.125rem;
     font-family: var(--font-2);
     font-size: 1.5rem;
     font-weight: 500;
