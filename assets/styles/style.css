@@ -83,6 +83,16 @@ textarea {
     clip-path: inset(50%);
 }
 
+html,
+body,
+main,
+.simple-note,
+.simple-note__inputs {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 html {
     min-height: 100%;
 }
