@@ -87,3 +87,17 @@ body {
     color: hsl(var(--color-1));
     background-color: hsl(var(--color-2));
 }
+
+.simple-note__input--title {
+    font-family: var(--font-2);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.simple-note__input--body {
+    font-family: var(--font-1);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
