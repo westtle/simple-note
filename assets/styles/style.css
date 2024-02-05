@@ -109,7 +109,7 @@ body {
     padding: 2rem 0;
 }
 
-.simple-note__input { padding: 0.875rem 0.75rem; }
+.simple-note__input { padding: 0.5625rem 0.75rem; }
 
 .simple-note__input--title {
     font-family: var(--font-2);
