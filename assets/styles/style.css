@@ -88,6 +88,8 @@ body {
     background-color: hsl(var(--color-2));
 }
 
+.simple-note { padding-top: 2rem; }
+
 .simple-note__input--title {
     margin-bottom: 1.125rem;
     font-family: var(--font-2);
