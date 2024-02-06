@@ -2,7 +2,20 @@
 const inputTitle = document.querySelector(".simple-note__input--title");
 const inputBody = document.querySelector(".simple-note__input--body");
 
+const clearButton = document.querySelector(".settings__button--clear");
 const downloadButton = document.querySelector(".settings__button--download");
+
+function clearNote() {
+    const confirmDelete = confirm("Are you sure you want to clear your note? Press OK to clear.");
+
+    if (confirmDelete) {
+        inputTitle.value = "";
+        inputBody.value = "";
+
+        saveTitle();
+        saveBody();
+    };
+};
 
 function downloadNote() {
     const noteTitle = inputTitle.value || "Simple Note";
@@ -56,30 +69,8 @@ const debouncedSaveBody = debounce(saveBody);
 inputTitle.addEventListener("input", debouncedSaveTitle);
 inputBody.addEventListener("input", debouncedSaveBody);
 downloadButton.addEventListener("click", downloadNote);
+clearButton.addEventListener("click", clearNote);
 
 document.addEventListener("DOMContentLoaded", () => {
     loadNote();
 });
-
-// function showDeleteConfirm() {
-//     confirmDeleteButton.style.display = "inline";
-//     deleteAllButton.style.display = "none";
-
-//     timerId = setTimeout(() => {
-//         confirmDeleteButton.style.display = "none";
-//         deleteAllButton.style.display = "inline";
-//     }, 2500);
-// };
-
-// function confirmDelete() {
-//     confirmDeleteButton.style.display = "none";
-//     deleteAllButton.style.display = "inline";
-
-//     noteTitle.value = "";
-//     noteBody.value = "";
-
-//     clearInterval(timerId);
-
-//     saveTitle();
-//     saveBody();
-// };
