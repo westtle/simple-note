@@ -43,6 +43,7 @@
 
     /* Other */
     --focus-outline: 0.125rem solid hsl(var(--color-1));
+    --focus-offset: 0;
 }
 
 *,
@@ -132,10 +133,11 @@ body {
 }
 
 .settings__button:focus-visible {
-    color: hsl(var(--color-1));
+    --focus-offset: 0.125rem;
 
+    color: hsl(var(--color-1));
     outline: var(--focus-outline);
-    outline-offset: 0.125rem;
+    outline-offset: var(--focus-offset);
 }
 
 @media (hover:hover) {
@@ -160,7 +162,10 @@ body {
 
 .simple-note__input { padding: 0.5625rem 0.75rem; }
 
-.simple-note__input:focus-visible { outline: var(--focus-outline); }
+.simple-note__input:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-offset);
+}
 
 .simple-note__input--title {
     font-family: var(--font-2);
