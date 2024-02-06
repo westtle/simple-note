@@ -73,6 +73,8 @@ textarea {
 
 ul { list-style: none; }
 
+::placeholder { color: hsl(var(--color-3)); }
+
 .sr-only {
     border: none;
     width: 0.0625rem;
@@ -107,8 +109,6 @@ body {
     color: hsl(var(--color-1));
     background-color: hsl(var(--color-2));
 }
-
-::placeholder { color: hsl(var(--color-3)); }
 
 /* Settings */
 
