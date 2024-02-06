@@ -107,6 +107,50 @@ body {
     background-color: hsl(var(--color-2));
 }
 
+/* Settings */
+
+.settings {
+    color: hsl(var(--color-3));
+    max-width: 1.5rem;
+
+    position: absolute;
+    top: 1.125rem;
+    left: 1.125rem;
+}
+
+.settings__buttons > *,
+.settings__button--toggle-settings { margin-bottom: 1.125rem; }
+
+.settings__buttons { width: 100%; }
+
+.settings__button {
+    display: block;
+    color: inherit;
+    width: 100%;
+    cursor: pointer;
+    transition: color ease-in-out 0.1s;
+}
+
+.settings__button:focus-visible {
+    color: hsl(var(--color-1));
+
+    outline: var(--focus-1);
+    outline-offset: 0.125rem;
+}
+
+@media (hover:hover) {
+    .settings__button:hover { color: hsl(var(--color-1)); }
+}
+
+.settings__button-svg { width: 100%; }
+
+.settings__separator {
+    display: block;
+    border-bottom: 2px solid hsl(var(--color-3));
+}
+
+/* Simple Note */
+
 .simple-note {
     width: 90%;
     max-width: 29.125rem;
