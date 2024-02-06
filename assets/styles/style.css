@@ -124,7 +124,19 @@ body {
 .settings__buttons > *,
 .settings__button--toggle-settings { margin-bottom: 1.125rem; }
 
-.settings__buttons { width: 100%; }
+.settings__button--toggle-settings[aria-expanded="true"] { color: hsl(var(--color-1)); }
+
+.settings__button--toggle-settings[aria-expanded="true"] + .settings__buttons {
+    right: 0;
+}
+
+.settings__buttons {
+    width: 100%;
+    transition: right cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.3s;
+
+    position: relative;
+    right: 3.125rem;
+}
 
 .settings__button {
     display: block;
