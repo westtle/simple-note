@@ -1,3 +1,7 @@
+// HTML.
+const inputTitle = document.querySelector(".simple-note__input--title");
+const inputBody = document.querySelector(".simple-note__input--body");
+
 const settingsToggle = document.querySelector(".settings__button--toggle-settings");
 const settingsList = document.querySelector(".settings__buttons");
 const settingsItems = settingsList.querySelectorAll("a, button");
@@ -16,22 +20,47 @@ function toggleSettings() {
     };
 };
 
+// Local Storage.
+const note_title = "Note_Title";
+const note_body = "Note_Body";
+
+function saveTitle() {
+    localStorage.setItem(note_title, inputTitle.value);
+};
+
+function saveBody() {
+    localStorage.setItem(note_body, inputBody.value);
+};
+
+function loadNote() {
+    let titleFromStorage = localStorage.getItem(note_title) || "";
+    inputTitle.value = titleFromStorage;
+
+    let bodyFromStorage = localStorage.getItem(note_body) || "";
+    inputBody.value = bodyFromStorage;
+};
+
+function debounce(func, delay = 250) {
+    let timerId;
+    return (...args) => {
+        clearTimeout(timerId);
+        timerId = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
+    };
+};
+
+const debouncedSaveTitle = debounce(saveTitle);
+const debouncedSaveBody = debounce(saveBody);
+
+inputTitle.addEventListener("input", debouncedSaveTitle);
+inputBody.addEventListener("input", debouncedSaveBody);
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadNote();
+});
+
 settingsToggle.addEventListener("click", toggleSettings);
-
-// let timerId;
-
-// // HTML.
-// const noteTitle = document.querySelector(".__title input");
-// const noteBody = document.querySelector(".__body textarea");
-
-// const selectAllButton = document.querySelector("._select-all");
-// const deleteAllButton = document.querySelector("._delete-all");
-// const confirmDeleteButton = document.querySelector("._delete-confirm");
-// const saveToLocalButton = document.querySelector("._save-to-local");
-
-// function selectAll() {
-//     noteBody.select();
-// };
 
 // function showDeleteConfirm() {
 //     confirmDeleteButton.style.display = "inline";
@@ -53,7 +82,7 @@ settingsToggle.addEventListener("click", toggleSettings);
 //     clearInterval(timerId);
 
 //     saveTitle();
-//     saveText();
+//     saveBody();
 // };
 
 // function downloadNote() {
@@ -70,37 +99,4 @@ settingsToggle.addEventListener("click", toggleSettings);
 //     element.click(); // Not my code, I just changed it a bit haha.
 
 //     document.body.removeChild(element);
-// };
-
-
-// // Local Storage.
-// const note_title = "Note_Title";
-// const note_text = "Note_Text";
-
-// function saveTitle() {
-//     localStorage.setItem(note_title, noteTitle.value);
-// };
-
-// function saveText() {
-//     localStorage.setItem(note_text, noteBody.value);
-// };
-
-// function loadData() {
-//     let titleFromStorage = localStorage.getItem(note_title) || "";
-//     noteTitle.value = titleFromStorage;
-
-//     let textFromStorage = localStorage.getItem(note_text) || "";
-//     noteBody.value = textFromStorage;
-// };
-
-// noteTitle.addEventListener("input", saveTitle);
-// noteBody.addEventListener("input", saveText);
-
-// selectAllButton.addEventListener("click", selectAll);
-// deleteAllButton.addEventListener("click", showDeleteConfirm);
-// confirmDeleteButton.addEventListener("click", confirmDelete);
-// saveToLocalButton.addEventListener("click", downloadNote);
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     loadData();
-// });
+// }
