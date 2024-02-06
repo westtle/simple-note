@@ -108,6 +108,8 @@ body {
     background-color: hsl(var(--color-2));
 }
 
+::placeholder { color: hsl(var(--color-3)); }
+
 /* Settings */
 
 .settings {
