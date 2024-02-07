@@ -100,17 +100,14 @@ textarea {
 
 ::placeholder { color: hsl(var(--color-3)); }
 
-html,
-body,
-main,
-.simple-note,
-.simple-note__inputs {
+/* Helper */
+
+.--flex-column {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
 }
 
-/* Helper */
+.--flex-grow { flex-grow: 1; }
 
 .--sr-only {
     border: none;
@@ -216,7 +213,6 @@ body {
 }
 
 .simple-note__input--body {
-    flex-grow: 1;
     font-family: var(--font-1);
     font-size: 1rem;
     font-weight: 400;
