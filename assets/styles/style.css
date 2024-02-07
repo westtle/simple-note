@@ -46,6 +46,18 @@
     --focus-offset: 0;
 }
 
+:root[data-theme="dark"] {
+    --color-1: var(--white), 80%;
+    --color-2: var(--black), 94%;
+
+    --focus-outline: 0.125rem solid hsl(var(--color-1));
+}
+
+:root[data-theme="dark"] .settings__button-svg--theme-sun { display: block; }
+:root[data-theme="dark"] .settings__button-svg--theme-moon { display: none; }
+:root[data-theme="dark"] .settings__button-svg-westtle--background { fill: #ffffff; }
+:root[data-theme="dark"] .settings__button-svg-westtle--cat { fill: #000000; }
+
 *,
 *::before,
 *::after {
@@ -158,6 +170,9 @@ body {
 }
 
 .settings__button-svg { width: 100%; }
+.settings__button-svg--theme-sun { display: none; }
+.settings__button-svg-westtle--background,
+.settings__button-svg-westtle--cat { transition: fill ease-in-out 0.1s;}
 
 .settings__separator {
     display: block;
@@ -173,7 +188,10 @@ body {
     padding: 2rem 0;
 }
 
-.simple-note__input { padding: 0.5625rem 0.75rem; }
+.simple-note__input {
+    padding: 0.5625rem 0.75rem;
+    transition: color ease-in-out 0.1s;
+}
 
 .simple-note__input:focus-visible {
     outline: var(--focus-outline);
