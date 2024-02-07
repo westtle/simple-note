@@ -100,7 +100,19 @@ textarea {
 
 ::placeholder { color: hsl(var(--color-3)); }
 
-.sr-only {
+html,
+body,
+main,
+.simple-note,
+.simple-note__inputs {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Helper */
+
+.--sr-only {
     border: none;
     width: 0.0625rem;
     height: 0.0625rem;
@@ -114,16 +126,6 @@ textarea {
     clip: rect(0 0 0 0);
     clip: rect(0, 0, 0, 0);
     clip-path: inset(50%);
-}
-
-html,
-body,
-main,
-.simple-note,
-.simple-note__inputs {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
 }
 
 body {
