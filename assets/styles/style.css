@@ -58,6 +58,8 @@
 :root[data-theme="dark"] .settings__button-svg-westtle--background { fill: #ffffff; }
 :root[data-theme="dark"] .settings__button-svg-westtle--cat { fill: #000000; }
 
+/* Resets */
+
 *,
 *::before,
 *::after {
@@ -65,6 +67,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html { min-height: 100%; }
 
 img,
 svg {
@@ -111,10 +115,6 @@ main,
     flex-grow: 1;
 }
 
-html {
-    min-height: 100%;
-}
-
 body {
     color: hsl(var(--color-1));
     background-color: hsl(var(--color-2));
@@ -133,12 +133,8 @@ body {
 
 .settings__buttons > *,
 .settings__button--toggle-settings { margin-bottom: 1.125rem; }
-
 .settings__button--toggle-settings[aria-expanded="true"] { color: hsl(var(--color-1)); }
-
-.settings__button--toggle-settings[aria-expanded="true"] + .settings__buttons {
-    right: 0;
-}
+.settings__button--toggle-settings[aria-expanded="true"] + .settings__buttons { right: 0; }
 
 .settings__buttons {
     width: 100%;
