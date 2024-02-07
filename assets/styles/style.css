@@ -129,6 +129,7 @@ main,
 body {
     color: hsl(var(--color-1));
     background-color: hsl(var(--color-2));
+    min-height: 21.875rem;
 }
 
 /* Settings */
