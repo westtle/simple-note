@@ -4,6 +4,7 @@
 *.css           text diff=css
 *.html          text diff=html
 *.js            text
+*.xml           text
 
 # Graphics
 *.png           binary
@@ -21,3 +22,4 @@
 
 # Configs
 .gitattributes  text
+*.webmanifest   text
