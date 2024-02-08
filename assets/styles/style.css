@@ -98,7 +98,10 @@ textarea {
     font: inherit;
 }
 
-::placeholder { color: hsl(var(--color-3)); }
+::placeholder {
+    color: hsl(var(--color-3));
+    opacity: 1;
+}
 
 /* Helper */
 
