@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="--flex-column --flex-grow" data-theme="light" lang="en" dir="ltr">
+<html class="-flex-column -flex-grow" data-theme="light" lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
     <meta name="apple-mobile-web-app-title" content="Simple Note">
@@ -26,7 +26,7 @@
     <link rel="manifest" href="./manifest.webmanifest">
     <link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
 </head>
-<body class="--flex-column --flex-grow">
+<body class="-flex-column -flex-grow">
     <aside class="settings" data-expanded="false">
         <button class="settings__button settings__button--toggle-settings" aria-label="Settings" aria-describedby="settings__button-description--toggle-settings" aria-expanded="false" aria-controls="settings__buttons">
             <svg class="settings__svg settings__svg--toggle-settings" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -88,14 +88,14 @@
         </ul>
     </aside>
 
-    <main class="--flex-column --flex-grow">
-        <section class="simple-note --flex-column --flex-grow">
+    <main class="-flex-column -flex-grow">
+        <section class="simple-note -flex-column -flex-grow">
             <h1 class="--sr-only">Simple Note</h1>
-            <div class="simple-note__inputs --flex-column --flex-grow">
+            <div class="simple-note__inputs -flex-column -flex-grow">
                 <label class="simple-note__label simple-note__label--title --sr-only" for="simple-note__input--title">Note Title</label>
                 <input id="simple-note__input--title" class="simple-note__input simple-note__input--title" type="text" placeholder="Title..." spellcheck="false">
                 <label class="simple-note__label simple-note__label--body --sr-only" for="simple-note__input--body">Note Content</label>
-                <textarea id="simple-note__input--body" class="simple-note__input simple-note__input--body --flex-grow" placeholder="Your content here..." spellcheck="false"></textarea>
+                <textarea id="simple-note__input--body" class="simple-note__input simple-note__input--body -flex-grow" placeholder="Your content here..." spellcheck="false"></textarea>
             </div>
         </section>
     </main>
