@@ -108,11 +108,8 @@ ul { list-style: none; }
 
 /* Utility and Helper */
 
-.-flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
+.-flex { display: flex; }
+.-flex-column { flex-direction: column; }
 .-flex-grow { flex-grow: 1; }
 
 .--sr-only {
