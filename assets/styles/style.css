@@ -35,6 +35,7 @@
     /* Colors */
     --black: 0, 0%, 0%;
     --white: 0, 0%, 100%;
+    --cod-gray: 0, 0%, 6%;
     --boulder: 0, 0%, 46%;
 
     --color-1: var(--black), 80%;
@@ -48,15 +49,18 @@
 
 :root[data-theme="dark"] {
     --color-1: var(--white), 80%;
-    --color-2: var(--black), 94%;
+    --color-2: var(--cod-gray);
 
     --focus-outline: 0.125rem solid hsl(var(--color-1));
 }
 
-:root[data-theme="dark"] .settings__button-svg--theme-sun { display: block; }
-:root[data-theme="dark"] .settings__button-svg--theme-moon { display: none; }
-:root[data-theme="dark"] .settings__button-svg-westtle--background { fill: #ffffff; }
-:root[data-theme="dark"] .settings__button-svg-westtle--cat { fill: #000000; }
+:root[data-theme="light"] .settings__svg--theme-sun { display: none; }
+:root[data-theme="dark"] .settings__svg--theme-sun { display: block; }
+:root[data-theme="dark"] .settings__svg--theme-moon { display: none; }
+:root[data-theme="dark"] .settings__svg-westtle--background { fill: #ffffff; }
+:root[data-theme="dark"] .settings__svg-westtle--cat { fill: #000000; }
+.settings__svg-westtle--background,
+.settings__svg-westtle--cat { transition: fill ease-in-out 0.11s; }
 
 /* Resets */
 
@@ -88,6 +92,8 @@ svg {
     height: auto;
 }
 
+svg { width: 100%; }
+
 button,
 input,
 textarea {
@@ -97,6 +103,9 @@ textarea {
     border: none;
     font: inherit;
 }
+
+ol,
+ul { list-style: none; }
 
 ::placeholder {
     color: hsl(var(--color-3));
@@ -138,33 +147,46 @@ body {
 
 .settings {
     color: hsl(var(--color-3));
-    max-width: 1.5rem;
+    max-height: 16.25rem; /* Height of .settings__buttons. Set it so people can interact with stuff directly below it. */
+    transition: left cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.25s;
 
-    position: absolute;
+    position: fixed;
     top: 1.125rem;
-    left: 1.125rem;
+    bottom: 1.125rem;
+    left: -2.625rem; /* Width of .settings__buttons */
+    z-index: 99;
 }
 
-.settings__buttons > *,
-.settings__button--toggle-settings { margin-bottom: 1.125rem; }
-.settings__button--toggle-settings[aria-expanded="true"] { color: hsl(var(--color-1)); }
-.settings__button--toggle-settings[aria-expanded="true"] + .settings__buttons { right: 0; }
+.settings[data-expanded="true"] { left: 0; }
+/* .settings:has([aria-expanded="true"]) { left: 0; } */
+
+/* Settings > Container For Buttons */
 
 .settings__buttons {
-    width: 100%;
-    list-style: none;
-    transition: right cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.3s;
-
-    position: relative;
-    right: 3.125rem;
+    background-color: hsl(var(--color-2));
+    border: 0.125rem solid;
+    border-color: currentColor;
+    border-left: none;
+    max-height: 100%;
+    padding: 0.75rem 0.5rem;
+    overflow: hidden;
 }
+
+.settings[data-expanded="true"] .settings__buttons { overflow-y: auto; }
+
+/* Settings > Individual Button */
+
+.settings__buttons > * { margin-bottom: 1.125rem; }
+.settings__buttons > *:last-child { margin: 0; }
 
 .settings__button {
     display: block;
     color: inherit;
     width: 100%;
+    max-width: 1.5rem;
     cursor: pointer;
-    transition: color ease-in-out 0.1s;
+    transition: ease-in-out 0.11s;
+    transition-property: color, opacity;
 }
 
 .settings__button:focus-visible {
@@ -179,14 +201,44 @@ body {
     .settings__button:hover { color: hsl(var(--color-1)); }
 }
 
-.settings__button-svg { width: 100%; }
-.settings__button-svg--theme-sun { display: none; }
-.settings__button-svg-westtle--background,
-.settings__button-svg-westtle--cat { transition: fill ease-in-out 0.1s;}
+.settings__button--toggle-settings {
+    background-color: hsl(var(--color-2));
+    border: 0.125rem solid hsl(var(--color-3));
+    border-left: none;
+
+    position: absolute;
+    left: 100%;
+}
+
+.settings__button--westtle { opacity: 0.75; }
+.settings__button--westtle:focus-visible { opacity: 1; }
+
+@media (hover:hover) {
+    .settings__button--westtle:hover { opacity: 1; }
+}
+
+.settings__buttons,
+.settings__button--toggle-settings { box-shadow: 0 0.0625rem 0.25rem hsl(0, 0%, 0%, 25%); }
+
+/* Settings > SVG */
+
+.settings__svg--toggle-settings {
+    padding: 13.67%; /* Use padding on svg to make it smaller (Remember to set the padding below 50%). */
+    transition: transform cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.25s;
+}
+
+.settings__button--toggle-settings[aria-expanded="true"] .settings__svg--toggle-settings {
+    color: hsl(var(--color-1));
+    transform: rotate(180deg);
+}
+
+.settings__svg--westtle { border-radius: 0.1875rem; }
 
 .settings__separator {
     display: block;
-    border-bottom: 2px solid hsl(var(--color-3));
+    border-bottom: 0.125rem solid;
+    border-color: currentColor;
+    border-radius: 6.1875rem;
 }
 
 /* Simple Note */

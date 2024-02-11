@@ -1,4 +1,5 @@
 // HTML.
+const settings = document.querySelector(".settings");
 const settingsToggle = document.querySelector(".settings__button--toggle-settings");
 const settingsList = document.querySelector(".settings__buttons");
 const settingsItems = settingsList.querySelectorAll("a, button");
@@ -7,12 +8,16 @@ function toggleSettings() {
     const isExpanded = (settingsToggle.getAttribute("aria-expanded") == "true");
 
     if (isExpanded) {
+        settings.setAttribute("data-expanded", false);
         settingsToggle.setAttribute("aria-expanded", false);
         settingsList.setAttribute("aria-hidden", true);
+        settingsList.tabIndex = -1;
         settingsItems.forEach(item => {item.tabIndex = -1});
     } else {
+        settings.setAttribute("data-expanded", true);
         settingsToggle.setAttribute("aria-expanded", true);
         settingsList.setAttribute("aria-hidden", false);
+        settingsList.removeAttribute("tabIndex");
         settingsItems.forEach(item => {item.tabIndex = 0});
     };
 };
