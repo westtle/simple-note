@@ -46,6 +46,8 @@
 :root[data-theme="dark"] {
     --color-1: var(--white), 80%;
     --color-2: var(--cod-gray);
+
+    color-scheme: dark;
 }
 
 :root[data-theme="light"] .settings__svg--theme-sun { display: none; }
