@@ -41,17 +41,11 @@
     --color-1: var(--black), 80%;
     --color-2: var(--white);
     --color-3: var(--boulder), 80%; /* Placeholder and Icons */
-
-    /* Other */
-    --focus-outline: 0.125rem solid hsl(var(--color-1));
-    --focus-offset: 0;
 }
 
 :root[data-theme="dark"] {
     --color-1: var(--white), 80%;
     --color-2: var(--cod-gray);
-
-    --focus-outline: 0.125rem solid hsl(var(--color-1));
 }
 
 :root[data-theme="light"] .settings__svg--theme-sun { display: none; }
@@ -110,6 +104,11 @@ ul { list-style: none; }
 ::placeholder {
     color: hsl(var(--color-3));
     opacity: 1;
+}
+
+:focus-visible {
+    outline: 0.125rem solid hsl(var(--color-1, 0, 0%, 0%));
+    outline-offset: var(--focus-offset, 0);
 }
 
 /* Helper */
@@ -193,8 +192,6 @@ body {
     --focus-offset: 0.125rem;
 
     color: hsl(var(--color-1));
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-offset);
 }
 
 @media (hover:hover) {
@@ -253,11 +250,6 @@ body {
 .simple-note__input {
     padding: 0.5625rem 0.75rem;
     transition: color ease-in-out 0.1s;
-}
-
-.simple-note__input:focus-visible {
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-offset);
 }
 
 .simple-note__input--title {
