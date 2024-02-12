@@ -42,8 +42,7 @@
 .settings__button {
     display: block;
     color: inherit;
-    width: 100%;
-    max-width: 1.5rem;
+    width: 1.5rem;
     cursor: pointer;
     transition: ease-in-out 0.11s;
     transition-property: color, opacity;
