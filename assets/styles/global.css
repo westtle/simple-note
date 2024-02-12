@@ -71,6 +71,11 @@ svg {
 
 svg { width: 100%; }
 
+a {
+    color: inherit;
+    background-color: transparent;
+}
+
 button,
 input,
 textarea {
