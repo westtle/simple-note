@@ -53,7 +53,7 @@
 .settings__button:focus-visible {
     --focus-offset: 0.125rem;
 
-    color: hsl(var(--settings-interact));
+    color: hsla(var(--settings-interact));
 }
 
 @media (hover:hover) {
@@ -87,7 +87,7 @@
 }
 
 .settings__button--toggle-settings[aria-expanded="true"] .settings__svg--toggle-settings {
-    color: hsl(var(--settings-interact));
+    color: hsla(var(--settings-interact));
     transform: rotate(180deg);
 }
 

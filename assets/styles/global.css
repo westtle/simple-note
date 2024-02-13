@@ -98,7 +98,7 @@ ul { list-style: none; }
 
 :focus-visible {
     outline: 0.125rem solid;
-    outline-color: hsl(var(--color-1, 0 0% 0%));
+    outline-color: hsla(var(--color-1, 0 0% 0% 100%));
     outline-offset: var(--focus-offset, 0);
 }
 
