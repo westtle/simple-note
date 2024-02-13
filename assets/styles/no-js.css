@@ -1,6 +1,6 @@
-noscript[hidden] { display: block; }
+.noscript__settings { display: block; }
 
-noscript p {
+.noscript__message {
     margin-top: 0.75rem;
     font-family: var(--font-1);
     font-size: 1rem;
