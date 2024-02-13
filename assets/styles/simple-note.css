@@ -1,7 +1,6 @@
 body {
     color: hsla(var(--color-1));
     background-color: hsl(var(--color-2));
-    min-height: 21.875rem;
 }
 
 .simple-note {
@@ -25,9 +24,15 @@ body {
 }
 
 .simple-note__input--body {
+    height: 80vh;
+    min-height: 20.3125rem;
     font-family: var(--font-1);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     resize: none;
+}
+
+@supports (display: flex) {
+    .simple-note__input--body { height: auto; }
 }

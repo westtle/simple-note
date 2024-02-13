@@ -115,9 +115,11 @@ ul { list-style: none; }
 
 /* Utility and Helper */
 
-.-flex { display: flex; }
-.-flex-column { flex-direction: column; }
-.-flex-grow { flex-grow: 1; }
+@supports (display: flex) {
+    .-flex { display: flex; }
+    .-flex-column { flex-direction: column; }
+    .-flex-grow { flex-grow: 1; }
+}
 
 .--sr-only {
     border: none;
