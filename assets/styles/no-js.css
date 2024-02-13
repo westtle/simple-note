@@ -1,0 +1,17 @@
+noscript p {
+    margin-top: 0.75rem;
+    font-family: var(--font-1);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.settings {
+    max-height: 5.875rem;
+    left: 0;
+}
+
+.settings__buttons,
+.settings__button--toggle-settings { display: none; }
+
+.settings__buttons--no-js { display: block; }
