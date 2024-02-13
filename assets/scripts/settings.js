@@ -26,3 +26,9 @@ function toggleSettings() {
 };
 
 settingsToggle.addEventListener("click", toggleSettings);
+
+document.addEventListener("DOMContentLoaded", () => {
+    // No tabbing and hide from screen reader until it is open.
+    settingsList.setAttribute("aria-hidden", true);
+    settingsItems.forEach(item => {item.tabIndex = -1});
+});
