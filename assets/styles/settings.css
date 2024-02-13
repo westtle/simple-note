@@ -7,7 +7,11 @@
 :root[data-theme="dark"] .settings__svg-westtle--cat { fill: #000000; }
 
 .settings {
-    color: hsl(var(--color-3));
+    --settings-color: var(--color-3);
+    --settings-background: var(--color-2);
+    --settings-interact: var(--color-1);
+
+    color: hsl(var(--settings-color));
     max-height: 16.25rem; /* Height of .settings__buttons. Set it so people can interact with stuff directly below it. */
     transition: left cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.25s;
 
@@ -23,9 +27,8 @@
 /* Settings > Container For Buttons */
 
 .settings__buttons {
-    background-color: hsl(var(--color-2));
-    border: 0.125rem solid;
-    border-color: currentColor;
+    background-color: hsl(var(--settings-background));
+    border: 0.125rem solid hsl(var(--settings-color));
     border-left: none;
     max-height: 100%;
     padding: 0.75rem 0.5rem;
@@ -50,16 +53,16 @@
 .settings__button:focus-visible {
     --focus-offset: 0.125rem;
 
-    color: hsl(var(--color-1));
+    color: hsl(var(--settings-interact));
 }
 
 @media (hover:hover) {
-    .settings__button:hover { color: hsl(var(--color-1)); }
+    .settings__button:hover { color: hsla(var(--settings-interact)); }
 }
 
 .settings__button--toggle-settings {
-    background-color: hsl(var(--color-2));
-    border: 0.125rem solid hsl(var(--color-3));
+    background-color: hsl(var(--settings-background));
+    border: 0.125rem solid hsl(var(--settings-color));
     border-left: none;
 
     position: absolute;
@@ -84,7 +87,7 @@
 }
 
 .settings__button--toggle-settings[aria-expanded="true"] .settings__svg--toggle-settings {
-    color: hsl(var(--color-1));
+    color: hsl(var(--settings-interact));
     transform: rotate(180deg);
 }
 
