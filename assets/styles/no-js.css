@@ -1,3 +1,5 @@
+noscript[hidden] { display: block; }
+
 noscript p {
     margin-top: 0.75rem;
     font-family: var(--font-1);
