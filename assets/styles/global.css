@@ -12,13 +12,13 @@
     --cod-gray: 0, 0%, 6%;
     --gray: 0, 0%, 58%;
 
-    --color-1: var(--black), 80%;
+    --color-1: var(--black), 0.8;
     --color-2: var(--white);
     --color-3: var(--gray); /* Placeholder and Icons */
 }
 
 :root[data-theme="dark"] {
-    --color-1: var(--white), 80%;
+    --color-1: var(--white), 0.8;
     --color-2: var(--cod-gray);
 
     color-scheme: dark;
@@ -76,7 +76,7 @@ ul { list-style: none; }
 
 :focus-visible {
     outline: 0.125rem solid;
-    outline-color: hsla(var(--color-1, 0 0% 0% 100%));
+    outline-color: hsla(var(--color-1, 0 0% 0% 1));
     outline-offset: var(--focus-offset, 0);
 }
 
