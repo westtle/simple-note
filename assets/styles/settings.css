@@ -1,4 +1,8 @@
-/* Settings */
+/*
+--------
+Settings
+--------
+*/
 
 :root[data-theme="light"] .settings__svg--theme-sun { display: none; }
 :root[data-theme="dark"] .settings__svg--theme-sun { display: block; }
@@ -12,13 +16,20 @@
     --settings-interact: var(--color-1);
 
     color: hsl(var(--settings-color));
-    max-height: 16.25rem; /* Height of .settings__buttons. Set it so people can interact with stuff directly below it. */
+    /*
+        Height of .settings__buttons.
+        Set it so people can interact with stuff directly below it.
+    */
+    max-height: 16.25rem;
     transition: left cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.25s;
 
     position: fixed;
     top: 1.125rem;
     bottom: 1.125rem;
-    left: -2.625rem; /* Width of .settings__buttons */
+    /*
+        Width of .settings__buttons.
+    */
+    left: -2.625rem;
     z-index: 99;
 }
 
@@ -82,7 +93,11 @@
 /* Settings > SVG */
 
 .settings__svg--toggle-settings {
-    padding: 13.67%; /* Use padding on svg to make it smaller (Remember to set the padding below 50%). */
+    /*
+        Use padding on svg to make it smaller.
+        Remember to set the padding below 50%.
+    */
+    padding: 13.67%;
     transition: transform cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.25s;
 }
 

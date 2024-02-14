@@ -1,3 +1,9 @@
+/*
+-----------
+Simple Note
+-----------
+*/
+
 body {
     color: hsla(var(--color-1));
     background-color: hsl(var(--color-2));

@@ -24,7 +24,11 @@
     color-scheme: dark;
 }
 
-/* Resets */
+/*
+------
+Resets
+------
+*/
 
 *,
 *::before,
@@ -87,7 +91,11 @@ ul { list-style: none; }
     }
 }
 
-/* Utility and Helper */
+/*
+------------------
+Utility and Helper
+------------------
+*/
 
 @supports (display: flex) {
     .-flex { display: flex; }

@@ -120,7 +120,11 @@
         </ul>
 
         <!-- No JS Fallback -->
-        <noscript class="noscript__settings" hidden> <!-- Use hidden so the list doesn't appear twice when both CSS and JS are disabled (Unhide in CSS). -->
+        <!--
+            Use hidden so the list doesn't appear twice when
+            both CSS and JS are disabled (Unhide in CSS).
+        -->
+        <noscript class="noscript__settings" hidden>
             <ul class="settings__buttons settings__buttons--no-js">
                 <li class="settings__button-item">
                     <a class="settings__button settings__button--github" aria-labelledby="settings__button-label--github--no-js" rel="noopener" href="https://github.com/westtle/simple-note" target="_blank">

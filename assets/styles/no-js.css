@@ -1,3 +1,9 @@
+/*
+--------------
+No JS Fallback
+--------------
+*/
+
 .noscript__settings { display: block; }
 
 .noscript__message {
