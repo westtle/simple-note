@@ -98,12 +98,12 @@ Utility and Helper
 */
 
 @supports (display: flex) {
-    .-flex { display: flex; }
-    .-flex-column { flex-direction: column; }
-    .-flex-grow { flex-grow: 1; }
+    ._flex { display: flex; }
+    ._flex-column { flex-direction: column; }
+    ._flex-grow { flex-grow: 1; }
 }
 
-.--sr-only {
+.__sr-only {
     border: none;
     width: 0.0625rem;
     height: 0.0625rem;

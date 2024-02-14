@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="-flex -flex-column -flex-grow" data-theme="light" lang="en" dir="ltr">
+<html class="_flex _flex-column _flex-grow" data-theme="light" lang="en" dir="ltr">
 <head>
     <meta charset="utf-8" />
     <meta name="apple-mobile-web-app-title" content="Simple Note" />
@@ -58,14 +58,14 @@
     <!-- No JS Fallback -->
     <noscript><link rel="stylesheet" type="text/css" href="./assets/styles/other/no-js.css" /></noscript>
 </head>
-<body class="-flex -flex-column -flex-grow">
+<body class="_flex _flex-column _flex-grow">
     <aside class="settings" data-expanded="false">
         <button class="settings__button settings__button--toggle-settings" aria-label="Settings" aria-describedby="settings__button-description--toggle-settings" aria-expanded="false" aria-controls="settings__buttons">
             <svg class="settings__svg settings__svg--toggle-settings" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <title>Settings</title>
                 <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
-            <span id="settings__button-description--toggle-settings" class="settings__button-description settings__button-description--toggle-settings --sr-only">Press to open settings.</span>
+            <span id="settings__button-description--toggle-settings" class="settings__button-description settings__button-description--toggle-settings __sr-only">Press to open settings.</span>
         </button>
         <ul id="settings__buttons" class="settings__buttons">
             <li class="settings__button-item">
@@ -78,7 +78,7 @@
                         <title>Theme</title>
                         <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                    <span id="settings__button-description--theme" class="settings__button-description settings__button-description--theme --sr-only">Press to change to dark theme.</span>
+                    <span id="settings__button-description--theme" class="settings__button-description settings__button-description--theme __sr-only">Press to change to dark theme.</span>
                 </button>
             </li>
             <span class="settings__separator" aria-hidden="true"></span>
@@ -88,7 +88,7 @@
                         <title>Clear Note</title>
                         <polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
                     </svg>
-                    <span id="settings__button-description--clear" class="settings__button-description settings__button-description--clear --sr-only">Press to delete all contents of the note.</span>
+                    <span id="settings__button-description--clear" class="settings__button-description settings__button-description--clear __sr-only">Press to delete all contents of the note.</span>
                 </button>
             </li>
             <li class="settings__button-item">
@@ -97,7 +97,7 @@
                         <title>Download Note</title>
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
-                    <span id="settings__button-description--download" class="settings__button-description settings__button-description--download --sr-only">Press to download the contents of the note.</span>
+                    <span id="settings__button-description--download" class="settings__button-description settings__button-description--download __sr-only">Press to download the contents of the note.</span>
                 </button>
             </li>
             <span class="settings__separator" aria-hidden="true"></span>
@@ -107,7 +107,7 @@
                         <title>Github Repository (New Tab)</title>
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
-                    <span id="settings__button-label--github" class="settings__button-label settings__button-label--github --sr-only">Github Repository (New Tab)</span>
+                    <span id="settings__button-label--github" class="settings__button-label settings__button-label--github __sr-only">Github Repository (New Tab)</span>
                 </a>
             </li>
             <li class="settings__button-item">
@@ -116,7 +116,7 @@
                         <title>westtle's Homepage (New Tab)</title>
                         <g transform="matrix(1 0 0 1 250 250)"><rect class="settings__svg-westtle--background" width="500" height="500" fill="#000000" vector-effect="non-scaling-stroke" x="-250" y="-250" rx="0" ry="0"></rect></g><g transform="matrix(27.64 -1.71 1.71 27.64 255.15 262.17)"><path class="settings__svg-westtle--cat" fill="#ffffff" vector-effect="non-scaling-stroke" stroke-linecap="round" transform="translate(-7, -7)" d="M 3 12 L 4 12 L 4 13 L 3 13 M 3 11 L 4 11 L 4 12 L 3 12 M 4 11 L 5 11 L 5 12 L 4 12 M 4 10 L 5 10 L 5 11 L 4 11 M 4 9 L 5 9 L 5 10 L 4 10 M 3 9 L 4 9 L 4 10 L 3 10 M 2 8 L 3 8 L 3 9 L 2 9 M 1 7 L 2 7 L 2 8 L 1 8 M 0 8 L 1 8 L 1 9 L 0 9 M 1 6 L 2 6 L 2 7 L 1 7 M 1 5 L 2 5 L 2 6 L 1 6 M 1 4 L 2 4 L 2 5 L 1 5 M 0 3 L 1 3 L 1 4 L 0 4 M 2 3 L 3 3 L 3 4 L 2 4 M 2 2 L 3 2 L 3 3 L 2 3 M 3 1 L 4 1 L 4 2 L 3 2 M 4 2 L 5 2 L 5 3 L 4 3 M 5 3 L 6 3 L 6 4 L 5 4 M 6 3 L 7 3 L 7 4 L 6 4 M 7 3 L 8 3 L 8 4 L 7 4 M 8 3 L 9 3 L 9 4 L 8 4 M 9 2 L 10 2 L 10 3 L 9 3 M 10 1 L 11 1 L 11 2 L 10 2 M 11 2 L 12 2 L 12 3 L 11 3 M 11 3 L 12 3 L 12 4 L 11 4 M 12 4 L 13 4 L 13 5 L 12 5 M 13 3 L 14 3 L 14 4 L 13 4 M 12 5 L 13 5 L 13 6 L 12 6 M 12 6 L 13 6 L 13 7 L 12 7 M 12 7 L 13 7 L 13 8 L 12 8 M 13 8 L 14 8 L 14 9 L 13 9 M 11 8 L 12 8 L 12 9 L 11 9 M 10 9 L 11 9 L 11 10 L 10 10 M 9 9 L 10 9 L 10 10 L 9 10 M 8 9 L 9 9 L 9 10 L 8 10 M 7 9 L 8 9 L 8 10 L 7 10 M 6 9 L 7 9 L 7 10 L 6 10 M 5 9 L 6 9 L 6 10 L 5 10 M 9 10 L 10 10 L 10 11 L 9 11 M 9 11 L 10 11 L 10 12 L 9 12 M 9 12 L 10 12 L 10 13 L 9 13"></path></g>
                     </svg>
-                    <span id="settings__button-label--westtle" class="settings__button-label settings__button-label--westtle --sr-only">westtle's Homepage (New Tab)</span>
+                    <span id="settings__button-label--westtle" class="settings__button-label settings__button-label--westtle __sr-only">westtle's Homepage (New Tab)</span>
                 </a>
             </li>
         </ul>
@@ -134,7 +134,7 @@
                             <title>Github Repository (New Tab)</title>
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
-                        <span id="settings__button-label--github--no-js" class="settings__button-label settings__button-label--github settings__button-label--github--no-js --sr-only">Github Repository (New Tab)</span>
+                        <span id="settings__button-label--github--no-js" class="settings__button-label settings__button-label--github settings__button-label--github--no-js __sr-only">Github Repository (New Tab)</span>
                     </a>
                 </li>
                 <li class="settings__button-item">
@@ -143,21 +143,21 @@
                             <title>westtle's Homepage (New Tab)</title>
                             <g transform="matrix(1 0 0 1 250 250)"><rect class="settings__svg-westtle--background" width="500" height="500" fill="#000000" vector-effect="non-scaling-stroke" x="-250" y="-250" rx="0" ry="0"></rect></g><g transform="matrix(27.64 -1.71 1.71 27.64 255.15 262.17)"><path class="settings__svg-westtle--cat" fill="#ffffff" vector-effect="non-scaling-stroke" stroke-linecap="round" transform="translate(-7, -7)" d="M 3 12 L 4 12 L 4 13 L 3 13 M 3 11 L 4 11 L 4 12 L 3 12 M 4 11 L 5 11 L 5 12 L 4 12 M 4 10 L 5 10 L 5 11 L 4 11 M 4 9 L 5 9 L 5 10 L 4 10 M 3 9 L 4 9 L 4 10 L 3 10 M 2 8 L 3 8 L 3 9 L 2 9 M 1 7 L 2 7 L 2 8 L 1 8 M 0 8 L 1 8 L 1 9 L 0 9 M 1 6 L 2 6 L 2 7 L 1 7 M 1 5 L 2 5 L 2 6 L 1 6 M 1 4 L 2 4 L 2 5 L 1 5 M 0 3 L 1 3 L 1 4 L 0 4 M 2 3 L 3 3 L 3 4 L 2 4 M 2 2 L 3 2 L 3 3 L 2 3 M 3 1 L 4 1 L 4 2 L 3 2 M 4 2 L 5 2 L 5 3 L 4 3 M 5 3 L 6 3 L 6 4 L 5 4 M 6 3 L 7 3 L 7 4 L 6 4 M 7 3 L 8 3 L 8 4 L 7 4 M 8 3 L 9 3 L 9 4 L 8 4 M 9 2 L 10 2 L 10 3 L 9 3 M 10 1 L 11 1 L 11 2 L 10 2 M 11 2 L 12 2 L 12 3 L 11 3 M 11 3 L 12 3 L 12 4 L 11 4 M 12 4 L 13 4 L 13 5 L 12 5 M 13 3 L 14 3 L 14 4 L 13 4 M 12 5 L 13 5 L 13 6 L 12 6 M 12 6 L 13 6 L 13 7 L 12 7 M 12 7 L 13 7 L 13 8 L 12 8 M 13 8 L 14 8 L 14 9 L 13 9 M 11 8 L 12 8 L 12 9 L 11 9 M 10 9 L 11 9 L 11 10 L 10 10 M 9 9 L 10 9 L 10 10 L 9 10 M 8 9 L 9 9 L 9 10 L 8 10 M 7 9 L 8 9 L 8 10 L 7 10 M 6 9 L 7 9 L 7 10 L 6 10 M 5 9 L 6 9 L 6 10 L 5 10 M 9 10 L 10 10 L 10 11 L 9 11 M 9 11 L 10 11 L 10 12 L 9 12 M 9 12 L 10 12 L 10 13 L 9 13"></path></g>
                         </svg>
-                        <span id="settings__button-label--westtle--no-js" class="settings__button-label settings__button-label--westtle settings__button-label--westtle--no-js --sr-only">westtle's Homepage (New Tab)</span>
+                        <span id="settings__button-label--westtle--no-js" class="settings__button-label settings__button-label--westtle settings__button-label--westtle--no-js __sr-only">westtle's Homepage (New Tab)</span>
                     </a>
                 </li>
             </ul>
         </noscript>
     </aside>
 
-    <main class="-flex -flex-column -flex-grow">
-        <section class="simple-note -flex -flex-column -flex-grow">
-            <h1 class="--sr-only">Simple Note</h1>
-            <div class="simple-note__inputs -flex -flex-column -flex-grow">
-                <label class="simple-note__label simple-note__label--title --sr-only" for="simple-note__input--title">Note Title</label>
+    <main class="_flex _flex-column _flex-grow">
+        <section class="simple-note _flex _flex-column _flex-grow">
+            <h1 class="__sr-only">Simple Note</h1>
+            <div class="simple-note__inputs _flex _flex-column _flex-grow">
+                <label class="simple-note__label simple-note__label--title __sr-only" for="simple-note__input--title">Note Title</label>
                 <input id="simple-note__input--title" class="simple-note__input simple-note__input--title" type="text" placeholder="Title..." spellcheck="false" />
-                <label class="simple-note__label simple-note__label--body --sr-only" for="simple-note__input--body">Note Content</label>
-                <textarea id="simple-note__input--body" class="simple-note__input simple-note__input--body -flex-grow" placeholder="Your content here..." spellcheck="false"></textarea>
+                <label class="simple-note__label simple-note__label--body __sr-only" for="simple-note__input--body">Note Content</label>
+                <textarea id="simple-note__input--body" class="simple-note__input simple-note__input--body _flex-grow" placeholder="Your content here..." spellcheck="false"></textarea>
                 
                 <!-- No JS Fallback -->
                 <noscript class="noscript__message">
