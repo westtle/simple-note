@@ -53,6 +53,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/settings.css" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/simple-note.css" />
     
+    <link rel="stylesheet" type="text/css" href="./assets/styles/print.css" media="print" />
     <!-- No JS Fallback -->
     <noscript><link rel="stylesheet" type="text/css" href="./assets/styles/no-js.css" /></noscript>
 </head>
@@ -161,6 +162,10 @@
                 <noscript class="noscript__message">
                     <p>Hello, it seems you have JavaScript disabled. This site uses localStorage to save your note on the web. You can still type in here, but if you want your note to be saved, you need to have JavaScript enabled (Unless you're using Firefox since it can remember your input).</p>
                 </noscript>
+            </div>
+            <div class="simple-note__print-helper" aria-hidden="true" tabindex="-1">
+                <div class="print-helper__title"></div>
+                <div class="print-helper__body"></div>
             </div>
         </section>
     </main>

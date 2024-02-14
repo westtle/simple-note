@@ -5,6 +5,9 @@ const inputBody = document.querySelector(".simple-note__input--body");
 const clearButton = document.querySelector(".settings__button--clear");
 const downloadButton = document.querySelector(".settings__button--download");
 
+const printHelperTitle = document.querySelector(".print-helper__title");
+const printHelperBody = document.querySelector(".print-helper__body");
+
 function clearNote() {
     const confirmDelete = confirm("Are you sure you want to clear your note? Press OK to clear.");
 
@@ -14,6 +17,7 @@ function clearNote() {
 
         saveTitle();
         saveBody();
+        updatePrint();
     };
 };
 
@@ -31,6 +35,11 @@ function downloadNote() {
     element.click();
 
     document.body.removeChild(element);
+};
+
+function updatePrint() {
+    printHelperTitle.innerText = inputTitle.value;
+    printHelperBody.innerText = inputBody.value;
 };
 
 // Local Storage.
@@ -68,9 +77,13 @@ const debouncedSaveBody = debounce(saveBody);
 
 inputTitle.addEventListener("input", debouncedSaveTitle);
 inputBody.addEventListener("input", debouncedSaveBody);
+inputTitle.addEventListener("change", updatePrint);
+inputBody.addEventListener("change", updatePrint);
+
 downloadButton.addEventListener("click", downloadNote);
 clearButton.addEventListener("click", clearNote);
 
 document.addEventListener("DOMContentLoaded", () => {
     loadNote();
+    updatePrint();
 });

@@ -1,0 +1,52 @@
+/*
+-----------
+Print Media
+-----------
+*/
+
+@media print {
+    :root[data-theme="dark"] {
+        /*
+            Obviously you don't want the
+            whole page to be dark.
+        */
+        --color-1: var(--black), 0.8;
+        --color-2: var(--white);
+    
+        color-scheme: light;
+    }
+
+    @page {
+        size: A4;
+        margin: 2cm;
+    }
+
+    .settings,
+    .simple-note__inputs { display: none; }
+    
+    .simple-note {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+
+    .simple-note__print-helper {
+        display: block;
+        line-height: 1.5;
+    }
+    
+    .print-helper__title {
+        font-family: var(--font-2);
+        font-size: 20pt;
+        font-weight: 500;
+        margin-bottom: 0.7cm;
+        word-wrap: break-word;
+    }
+    
+    .print-helper__body {
+        font-family: var(--font-1);
+        font-size: 14pt;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+}

@@ -42,3 +42,5 @@ body {
 @supports (display: flex) {
     .simple-note__input--body { height: auto; }
 }
+
+.simple-note__print-helper { display: none; }
