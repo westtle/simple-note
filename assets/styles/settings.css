@@ -21,7 +21,7 @@ Settings
         Set it so people can interact with stuff directly below it.
     */
     max-height: 16.25rem;
-    transition: left cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.25s;
+    transition: left cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.26s;
 
     position: fixed;
     top: 1.125rem;
@@ -29,7 +29,7 @@ Settings
     /*
         Width of .settings__buttons.
     */
-    left: -2.625rem;
+    left: -2.75rem;
     z-index: 99;
 }
 
@@ -42,7 +42,7 @@ Settings
     border: 0.125rem solid hsl(var(--settings-color));
     border-left: none;
     max-height: 100%;
-    padding: 0.75rem 0.5rem;
+    padding: 0.1875rem 0;
     overflow: hidden;
 }
 
@@ -50,19 +50,17 @@ Settings
 
 /* Settings > Individual Button */
 
-.settings__buttons > * { margin-bottom: 1.125rem; }
-.settings__buttons > *:last-child { margin: 0; }
-
 .settings__button {
     display: block;
-    width: 1.5rem;
+    width: 2.625rem;
+    padding: 0.5625rem;
     cursor: pointer;
     transition: ease-in-out 0.11s;
     transition-property: color, opacity;
 }
 
 .settings__button:focus-visible {
-    --focus-offset: 0.125rem;
+    --focus-offset: -0.4375rem;
 
     color: hsla(var(--settings-interact));
 }
@@ -75,10 +73,14 @@ Settings
     background-color: hsl(var(--settings-background));
     border: 0.125rem solid hsl(var(--settings-color));
     border-left: none;
+    width: 1.5rem;
+    padding: 0;
 
     position: absolute;
     left: 100%;
 }
+
+.settings__button--toggle-settings:focus-visible { --focus-offset: 0.125rem; }
 
 .settings__button--westtle { opacity: 0.75; }
 .settings__button--westtle:focus-visible { opacity: 1; }
@@ -98,7 +100,7 @@ Settings
         Remember to set the padding below 50%.
     */
     padding: 13.67%;
-    transition: transform cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.25s;
+    transition: transform cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.26s;
 }
 
 .settings__button--toggle-settings[aria-expanded="true"] .settings__svg--toggle-settings {
@@ -116,4 +118,5 @@ Settings
     border-bottom: 0.125rem solid;
     border-color: currentColor;
     border-radius: 6.1875rem;
+    margin: 0.5625rem 0.5rem;
 }
