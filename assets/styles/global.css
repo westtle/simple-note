@@ -74,9 +74,12 @@ ul { list-style: none; }
     opacity: 1;
 }
 
+:focus { outline: 0.125rem solid hsla(0, 0%, 0%, 0.8); }
+:focus:not(:focus-visible) { outline: none; }
+
 :focus-visible {
     outline: 0.125rem solid;
-    outline-color: hsla(var(--color-1, 0 0% 0% 1));
+    outline-color: hsla(var(--color-1));
     outline-offset: var(--focus-offset, 0);
 }
 
