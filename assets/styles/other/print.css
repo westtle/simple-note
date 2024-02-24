@@ -18,7 +18,7 @@ Print Media
 
     @page {
         size: A4;
-        margin: 2cm;
+        margin: 2.54cm;
     }
 
     .settings,
@@ -36,16 +36,18 @@ Print Media
     }
     
     .print-helper__title {
+        margin-bottom: 1.625rem;
         font-family: var(--font-2);
-        font-size: 20pt;
+        font-size: 19.92pt;
         font-weight: 500;
-        margin-bottom: 0.7cm;
+        letter-spacing: -0.02em;
+        line-height: 1.4;
         word-wrap: break-word;
     }
     
     .print-helper__body {
         font-family: var(--font-1);
-        font-size: 14pt;
+        font-size: 13.5pt;
         font-weight: 400;
         word-wrap: break-word;
     }
