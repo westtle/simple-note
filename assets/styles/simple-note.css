@@ -24,9 +24,10 @@ body {
 
 .simple-note__input--title {
     font-family: var(--font-2);
-    font-size: 1.5rem;
+    font-size: 1.475rem;
     font-weight: 500;
-    line-height: normal;
+    letter-spacing: -0.02em;
+    line-height: 1.4;
 }
 
 .simple-note__input--body {
