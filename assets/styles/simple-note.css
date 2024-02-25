@@ -18,7 +18,7 @@ body {
 
 .simple-note__input {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.7813rem 0.75rem;
     transition: color ease-in-out 0.1s;
 }
 
